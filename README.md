@@ -1,10 +1,111 @@
-# OBS Chzzk Alerts Releases
+# OBS Chzzk Alerts
 
-OBS Chzzk Alerts의 공식 Windows 배포 저장소입니다.
+치지직에서 새로운 팔로워가 생기면 OBS 화면에 팔로워 닉네임을 표시해 주는 Windows용 도구입니다.
 
-- [최신 릴리스 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
-- [소스 코드와 문서](https://github.com/TereBin/obs-chzzk-alerts)
+현재는 **팔로우 알림만 지원**합니다. 구독과 후원은 치지직에서 제공하는 기존 알림 기능을 이용해 주세요.
 
-일반 사용자는 `obs-chzzk-alerts-<버전>-windows-x64-setup.exe` 설치 파일을 사용하세요. ZIP 파일은 수동 설치와 검증 용도입니다.
+## 다운로드
 
-설치 파일은 아직 코드 서명되지 않았으므로 Windows SmartScreen 경고가 나타날 수 있습니다. 릴리스에 첨부된 `SHA256SUMS.txt`로 파일 무결성을 확인할 수 있습니다.
+[최신 버전 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
+
+릴리스 페이지에서 다음 파일을 받으면 됩니다.
+
+- 권장: `obs-chzzk-alerts-<버전>-windows-x64-setup.exe`
+- 수동 설치용: `obs-chzzk-alerts-<버전>-windows-x64.zip`
+- 파일 검증용: `SHA256SUMS.txt`
+
+## 필요한 프로그램
+
+- Windows 10 또는 Windows 11 64비트
+- OBS Studio 64비트
+- Chrome 또는 Microsoft Edge
+- 치지직 스트리머 스튜디오 리모컨을 사용할 수 있는 계정
+
+OBS Live Editor도 사용한다면 반드시 `0.3.2` 이상으로 업데이트하세요. 이전 `0.3.1`과 함께 사용하면 연결 포트가 충돌합니다.
+
+## 1. 플러그인 설치
+
+1. OBS Studio를 완전히 종료합니다.
+2. 내려받은 `setup.exe`를 실행합니다.
+3. Windows 관리자 권한 요청을 승인합니다.
+4. 설치가 끝나면 OBS를 실행합니다.
+
+설치 파일은 아직 코드 서명되지 않아 Windows SmartScreen이 표시될 수 있습니다. GitHub 릴리스에서 받은 파일인지 확인하고, 필요한 경우 `추가 정보` → `실행`을 선택하세요.
+
+## 2. 브라우저 확장 프로그램 등록
+
+Chrome은 주소창에 `chrome://extensions`, Edge는 `edge://extensions`를 입력합니다.
+
+1. 오른쪽 위의 `개발자 모드`를 켭니다.
+2. `압축해제된 확장 프로그램을 로드`를 누릅니다.
+3. 다음 폴더를 선택합니다.
+
+   ```text
+   C:\Program Files\obs-studio\data\obs-plugins\obs-chzzk-alerts\browser-relay
+   ```
+
+4. `OBSChzzk 리모컨 이벤트 브리지` 버전 `0.2.0`이 활성화됐는지 확인합니다.
+
+업데이트 후에는 확장 프로그램 관리 화면에서 새로고침 버튼을 누르고, 열려 있던 치지직 리모컨 탭도 새로고침해야 합니다.
+
+## 3. OBS 브라우저 소스 추가
+
+1. OBS의 `소스 목록`에서 `+`를 누릅니다.
+2. `브라우저`를 선택합니다.
+3. `로컬 파일`을 체크합니다.
+4. 다음 파일을 선택합니다.
+
+   ```text
+   C:\Program Files\obs-studio\data\obs-plugins\obs-chzzk-alerts\browser-source\chzzk-alert.html
+   ```
+
+5. 원하는 크기와 화면 위치를 조정합니다. 예시 크기로 `800 × 200`을 사용할 수 있습니다.
+
+## 4. 사용 방법
+
+1. OBS를 먼저 실행합니다.
+2. 확장 프로그램을 등록한 Chrome 또는 Edge에서 치지직 스트리머 스튜디오의 `리모컨`을 엽니다.
+3. 리모컨 탭을 열어 둔 상태로 방송합니다.
+4. 새로운 사용자가 채널을 팔로우하면 OBS 브라우저 소스에 닉네임이 약 5초 동안 표시됩니다.
+
+동일한 계정으로 언팔로우한 뒤 다시 팔로우하면 치지직 서버의 중복 처리 때문에 새 알림이 오지 않을 수 있습니다. 처음 팔로우하는 다른 계정으로 테스트하는 것이 가장 정확합니다.
+
+## 화면만 미리 테스트하기
+
+브라우저 소스의 로컬 파일 경로 뒤에 다음 값을 붙이면 실제 팔로우 없이 표시 형태를 확인할 수 있습니다.
+
+```text
+?demo=follow&nickname=테스트
+```
+
+## 알림이 나오지 않을 때
+
+다음 순서로 확인하세요.
+
+1. OBS가 실행 중인지 확인합니다.
+2. OBS 브라우저 소스가 현재 장면에서 보이는 상태인지 확인합니다.
+3. 확장 프로그램 `0.2.0`이 활성화됐는지 확인합니다.
+4. 확장 프로그램을 새로고침한 뒤 리모컨 탭도 새로고침합니다.
+5. 리모컨 자체에 새 팔로우가 표시됐는지 확인합니다.
+
+증상별 원인:
+
+- 리모컨에는 보이지만 OBS에는 안 보임: 확장 프로그램, OBS 플러그인 또는 브라우저 소스 연결 문제
+- 둘 다 안 보임: 치지직에서 새 팔로우 이벤트가 발생하지 않은 상태
+- `ERR_CONNECTION_REFUSED`가 보임: OBS가 꺼져 있거나 플러그인이 정상 로드되지 않음
+- OBS Chzzk Alerts가 로드되지 않음: OBS Live Editor `0.3.1` 또는 다른 프로그램이 `21345` 포트를 사용 중일 수 있음
+
+## 업데이트와 제거
+
+- 업데이트: OBS를 종료한 뒤 새 버전 설치 파일을 실행하면 기존 파일을 교체합니다.
+- 제거: Windows의 `설치된 앱`에서 `OBS Chzzk Alerts`를 제거합니다.
+- 확장 프로그램: Chrome/Edge 확장 프로그램 관리 화면에서 별도로 제거합니다.
+- 기존 브라우저 소스가 남아 있으면 OBS 소스 목록에서 직접 삭제합니다.
+
+## 개인정보와 네트워크
+
+팔로우 알림은 사용자 컴퓨터 안에서만 전달됩니다. 치지직 리모컨에서 확인한 닉네임을 `127.0.0.1`의 OBS 플러그인으로 전달하며 별도의 외부 서버에 저장하거나 전송하지 않습니다.
+
+## 개발 정보
+
+소스 코드, 기술 구조와 빌드 방법은 [obs-chzzk-alerts 소스 저장소](https://github.com/TereBin/obs-chzzk-alerts)에서 확인할 수 있습니다.
