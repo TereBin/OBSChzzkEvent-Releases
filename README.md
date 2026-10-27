@@ -54,10 +54,9 @@
 현재 버전은 `0.5.0`이며, 동봉된 브라우저 확장 프로그램은 `0.2.2`입니다.
 
 - [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.5.0/obs-chzzk-alerts-0.5.0-windows-x64-setup.exe)
-- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.5.0/obs-chzzk-alerts-0.5.0-windows-x64.zip)
 - [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
 
-일반 사용자는 설치 파일을 권장합니다. ZIP은 수동 설치와 파일 검증 용도입니다. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
+일반 사용자는 설치 파일을 권장합니다. ZIP 설치가 필요한 경우 아래의 접힌 수동 설치 안내를 펼쳐 주세요. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
 
 ```powershell
 Get-FileHash .\obs-chzzk-alerts-*-windows-x64-setup.exe -Algorithm SHA256
@@ -85,16 +84,21 @@ OBS Live Editor도 사용한다면 반드시 `0.3.2` 이상으로 업데이트�
 
 설치 파일은 아직 코드 서명되지 않아 Windows SmartScreen이 표시될 수 있습니다. GitHub 릴리스에서 받은 파일인지 확인하고, 필요한 경우 `추가 정보` → `실행`을 선택하세요.
 
-### ZIP으로 수동 설치
+<details>
+<summary>ZIP으로 수동 설치하기 (필요한 경우 펼치기)</summary>
+
+[수동 설치용 Windows x64 ZIP 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.5.0/obs-chzzk-alerts-0.5.0-windows-x64.zip)
 
 OBS를 완전히 종료한 뒤 ZIP의 파일을 다음 위치에 복사합니다.
 
 | ZIP 안의 파일 | 복사할 위치 |
 | --- | --- |
-| `bin\\64bit\\obs-chzzk-alerts.dll` | `<OBS 설치 폴더>\\obs-plugins\\64bit` |
-| `data` 폴더 안의 모든 폴더와 파일 | `<OBS 설치 폴더>\\data\\obs-plugins\\obs-chzzk-alerts` |
+| `bin\64bit\obs-chzzk-alerts.dll` | `<OBS 설치 폴더>\obs-plugins\64bit` |
+| `data` 폴더 안의 모든 폴더와 파일 | `<OBS 설치 폴더>\data\obs-plugins\obs-chzzk-alerts` |
 
 `obs-chzzk-alerts.pdb`는 오류 분석용으로, 일반 사용에 필수는 아닙니다.
+
+</details>
 
 ### 업데이트
 
