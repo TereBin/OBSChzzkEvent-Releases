@@ -4,15 +4,6 @@
 
 현재는 **팔로우 알림만 지원**합니다. 구독과 후원은 치지직에서 제공하는 기존 알림 기능을 이용해 주세요.
 
-## 빠른 시작
-
-1. 최신 `setup.exe`를 설치합니다.
-2. Chrome 또는 Edge에 포함된 브라우저 확장 프로그램을 등록합니다.
-3. OBS에서 `치지직 팔로우 알림` 소스를 추가합니다.
-4. OBS를 실행한 상태로 치지직 스트리머 스튜디오의 리모컨 탭을 열어 둡니다.
-
-처음 설정할 때는 OBS 소스 속성의 `테스트 알림 표시` 버튼부터 눌러 화면 구성을 확인하세요.
-
 ## 바로 가기
 
 - [최신 버전 다운로드](#다운로드)
@@ -103,7 +94,7 @@ Chrome은 주소창에 `chrome://extensions`, Edge는 `edge://extensions`를 입
 3. 다음 폴더를 선택합니다.
 
    ```text
-   C:\Program Files\obs-studio\data\obs-plugins\obs-chzzk-alerts\browser-relay
+   <OBS 설치 폴더>\data\obs-plugins\obs-chzzk-alerts\browser-relay
    ```
 
 4. `OBSChzzk 리모컨 이벤트 브리지` 버전 `0.2.0`이 활성화됐는지 확인합니다.
