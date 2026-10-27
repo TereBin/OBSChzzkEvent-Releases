@@ -31,6 +31,7 @@
 - 이미지/GIF를 알림의 왼쪽·오른쪽·위·아래 또는 배경에 배치
 - 이미지 크기·여백·불투명도와 원본 비율 유지 설정
 - 새 알림마다 GIF를 처음부터 재생하는 옵션
+- 팔로우 알림마다 원하는 음원 재생 및 음량 설정
 - 문구, 글꼴, 색상, 배경, 외곽선, 그림자와 정렬 설정
 - 표시 시간, 페이드 인·아웃, 대기열과 중복 알림 방지 설정
 - 설정 화면에서 즉시 확인할 수 있는 테스트 알림
@@ -40,10 +41,10 @@
 
 ## 다운로드
 
-현재 버전은 `0.3.1`입니다.
+현재 버전은 `0.4.0`입니다.
 
-- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.1/obs-chzzk-alerts-0.3.1-windows-x64-setup.exe)
-- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.1/obs-chzzk-alerts-0.3.1-windows-x64.zip)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.4.0/obs-chzzk-alerts-0.4.0-windows-x64-setup.exe)
+- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.4.0/obs-chzzk-alerts-0.4.0-windows-x64.zip)
 - [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
 
 일반 사용자는 설치 파일을 권장합니다. ZIP은 수동 설치와 파일 검증 용도입니다. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
@@ -108,10 +109,13 @@ Chrome은 주소창에 `chrome://extensions`, Edge는 `edge://extensions`를 입
 3. 기본 문구의 `{nickname}` 부분이 팔로워 닉네임으로 바뀝니다. 문구, 글꼴, 색상, 배경, 외곽선, 그림자와 정렬을 원하는 모양으로 조정합니다.
 4. 이미지나 GIF를 함께 표시하려면 `이미지 / GIF`에서 `미디어 사용`을 켜고 파일을 선택합니다.
 5. 미디어의 배치, 너비·높이, 텍스트와의 여백, 불투명도와 원본 비율 유지 여부를 조정합니다. 움직이는 GIF는 `알림마다 GIF 처음부터 재생`을 켜는 것을 권장합니다.
-6. 표시 시간, 페이드 인·아웃 시간, 최대 대기열과 동일 닉네임 중복 방지 시간을 설정합니다.
-7. `테스트 알림` 버튼을 눌러 방송 화면에서 텍스트와 이미지/GIF의 모양과 애니메이션을 확인한 뒤 소스의 크기와 위치를 조정합니다.
+6. 소리를 함께 재생하려면 `알림 소리`에서 `알림 소리 사용`을 켜고 음원 파일과 음량을 설정합니다.
+7. 표시 시간, 페이드 인·아웃 시간, 최대 대기열과 동일 닉네임 중복 방지 시간을 설정합니다.
+8. `테스트 알림` 버튼을 눌러 방송 화면의 모양과 음원 재생을 확인한 뒤 소스의 크기와 위치를 조정합니다.
 
 지원 형식은 OBS 이미지 소스가 지원하는 `BMP`, `TGA`, `PNG`, `JPEG`, `GIF`, `PSD`, `WebP`입니다. 배경 배치는 미디어 위에 텍스트와 텍스트 배경을 표시하므로, 배경 불투명도를 함께 조절하면 글자를 더 선명하게 만들 수 있습니다.
+
+음원은 `MP3`, `WAV`, `OGG`, `AAC`, `M4A`, `FLAC`, `Opus` 등의 일반적인 형식을 사용할 수 있습니다. 방송 송출에는 기본적으로 포함되며, 방송 진행자가 직접 들으려면 OBS의 `고급 오디오 속성`에서 해당 소스의 오디오 모니터링을 설정하세요.
 
 ### 권장 기본 설정
 
@@ -122,6 +126,7 @@ Chrome은 주소창에 `chrome://extensions`, Edge는 `edge://extensions`를 입
 - 미디어 배치: `왼쪽`
 - 텍스트와의 여백: `20`
 - 미디어 불투명도: `100%`
+- 알림 소리 음량: `100%`
 - 표시 시간: `5초`
 - 페이드 인·아웃: 각각 `300ms`
 - 최대 대기 알림 수: `20`
