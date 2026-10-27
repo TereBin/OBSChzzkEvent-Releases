@@ -49,10 +49,10 @@
 
 ## 다운로드
 
-현재 버전은 `0.3.0`입니다.
+현재 버전은 `0.3.1`입니다.
 
-- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.0/obs-chzzk-alerts-0.3.0-windows-x64-setup.exe)
-- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.0/obs-chzzk-alerts-0.3.0-windows-x64.zip)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.1/obs-chzzk-alerts-0.3.1-windows-x64-setup.exe)
+- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.3.1/obs-chzzk-alerts-0.3.1-windows-x64.zip)
 - [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
 
 일반 사용자는 설치 파일을 권장합니다. ZIP은 수동 설치와 파일 검증 용도입니다. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
@@ -78,6 +78,8 @@ OBS Live Editor도 사용한다면 반드시 `0.3.2` 이상으로 업데이트�
 2. 내려받은 `setup.exe`를 실행합니다.
 3. Windows 관리자 권한 요청을 승인합니다.
 4. 설치가 끝나면 OBS를 실행합니다.
+
+설치 프로그램은 권한 충돌을 방지하기 위해 OBS를 자동으로 실행하지 않습니다. 설치 완료 창을 닫은 뒤 OBS를 직접 실행해 주세요.
 
 설치 파일은 아직 코드 서명되지 않아 Windows SmartScreen이 표시될 수 있습니다. GitHub 릴리스에서 받은 파일인지 확인하고, 필요한 경우 `추가 정보` → `실행`을 선택하세요.
 
