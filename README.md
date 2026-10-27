@@ -39,7 +39,7 @@
 - 이벤트를 외부 서버로 보내지 않는 로컬 중계 방식
 - 설치 프로그램을 통한 OBS 위치 자동 탐색 및 업데이트
 
-## 0.5.0 업데이트 안내 (배포 준비)
+## 0.5.0 업데이트 안내
 
 - 기본 알림음 1·2·3을 바로 선택할 수 있습니다. 별도의 음원 파일을 찾지 않아도 됩니다.
 - 직접 준비한 음원을 쓰려면 `사용자 파일`을 선택합니다.
@@ -47,14 +47,14 @@
 - 일반 탭과 팝업형 리모컨을 지원하며, 연결과 중복 알림 처리를 개선했습니다.
 - 기존 알림 문구·이미지·GIF·장면 설정은 그대로 사용할 수 있습니다.
 
-아래 소리 선택 설명은 `0.5.0` 기준입니다. 현재 공개된 이전 설치 파일에는 기본 알림음 선택 기능이 없습니다.
+아래 설정 방법은 `0.5.0` 기준입니다. 이전 버전을 사용 중이라면 최신 설치 파일로 업데이트해 주세요.
 
 ## 다운로드
 
-현재 공개 버전은 `0.4.0`입니다. 아래 `0.5.0` 변경 사항은 다음 배포를 위한 안내이며, 공개 설치 파일은 릴리스 페이지에서 확인해 주세요.
+현재 버전은 `0.5.0`이며, 동봉된 브라우저 확장 프로그램은 `0.2.2`입니다.
 
-- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.4.0/obs-chzzk-alerts-0.4.0-windows-x64-setup.exe)
-- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.4.0/obs-chzzk-alerts-0.4.0-windows-x64.zip)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.5.0/obs-chzzk-alerts-0.5.0-windows-x64-setup.exe)
+- [수동 설치용 Windows x64 ZIP](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.5.0/obs-chzzk-alerts-0.5.0-windows-x64.zip)
 - [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
 
 일반 사용자는 설치 파일을 권장합니다. ZIP은 수동 설치와 파일 검증 용도입니다. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
@@ -84,6 +84,17 @@ OBS Live Editor도 사용한다면 반드시 `0.3.2` 이상으로 업데이트�
 설치 프로그램은 권한 충돌을 방지하기 위해 OBS를 자동으로 실행하지 않습니다. 설치 완료 창을 닫은 뒤 OBS를 직접 실행해 주세요.
 
 설치 파일은 아직 코드 서명되지 않아 Windows SmartScreen이 표시될 수 있습니다. GitHub 릴리스에서 받은 파일인지 확인하고, 필요한 경우 `추가 정보` → `실행`을 선택하세요.
+
+### ZIP으로 수동 설치
+
+OBS를 완전히 종료한 뒤 ZIP의 파일을 다음 위치에 복사합니다.
+
+| ZIP 안의 파일 | 복사할 위치 |
+| --- | --- |
+| `bin\\64bit\\obs-chzzk-alerts.dll` | `<OBS 설치 폴더>\\obs-plugins\\64bit` |
+| `data` 폴더 안의 모든 폴더와 파일 | `<OBS 설치 폴더>\\data\\obs-plugins\\obs-chzzk-alerts` |
+
+`obs-chzzk-alerts.pdb`는 오류 분석용으로, 일반 사용에 필수는 아닙니다.
 
 ### 업데이트
 
