@@ -1,4 +1,4 @@
-# OBS Chzzk Alerts
+# OBSChzzkEvent
 
 치지직에서 새로운 팔로워가 생기면 OBS 화면에 팔로워 닉네임을 표시해 주는 Windows용 도구입니다.
 
@@ -19,7 +19,7 @@
 
 ## 베타 안내
 
-**OBS Chzzk Alerts는 현재 베타 버전입니다.**
+**OBSChzzkEvent는 현재 베타 버전입니다.**
 
 팔로우 알림은 치지직 공식 Open API가 아니라 스트리머 스튜디오 리모컨의 Socket.IO 이벤트를 감지해 표시합니다. 별도의 치지직 API 키는 필요하지 않지만, 치지직이 리모컨의 통신 형식과 호환성을 보장하지는 않습니다.
 
@@ -44,8 +44,9 @@
 - 이벤트를 외부 서버로 보내지 않는 로컬 중계 방식
 - 설치 프로그램을 통한 OBS 위치 자동 탐색 및 업데이트
 
-## 0.6.1 업데이트 안내
+## 0.6.2 업데이트 안내
 
+- 프로그램 이름을 `OBSChzzkEvent`로 변경했습니다. 기존 설정과 확장 프로그램 등록 경로를 그대로 사용할 수 있습니다.
 - 확장 프로그램 아이콘에서 OBS 연결을 확인하고 테스트 닉네임으로 알림을 보낼 수 있습니다. 리모컨을 열지 않아도 사용할 수 있습니다.
 - OBS의 수신 응답을 확인해 성공·실패를 표시하며, 연결 실패·구버전 플러그인 안내를 제공합니다.
 - 같은 닉네임으로 반복 테스트할 수 있습니다. 테스트는 실제 팔로우 수신 시각을 바꾸지 않으며, 전송에 실패한 테스트를 나중에 자동으로 다시 보내지 않습니다.
@@ -55,22 +56,22 @@
 - 소스 설정을 바꿔도 OBS 믹서에서 조절한 음량을 유지합니다. 소스 속성의 알림 음량은 별도로 적용됩니다.
 - 내부 음원 보관 수를 제한하고 자원 정리를 개선했습니다. 기본 알림음 3종과 사용자 음원은 계속 사용할 수 있습니다.
 
-아래 설정 방법은 `0.6.1` 기준입니다. 업데이트 후 확장 프로그램 관리 화면에서 새로고침하고 치지직 리모컨도 다시 열어 주세요.
+아래 설정 방법은 `0.6.2` 기준입니다. 업데이트 후 확장 프로그램 관리 화면에서 새로고침하고 치지직 리모컨도 다시 열어 주세요.
 
 ### 확장 프로그램에서 연결 테스트
 
-플러그인 `0.6.1`과 동봉된 확장 프로그램 `0.4.0`에서 사용할 수 있습니다. OBS를 실행하고 방송 화면에 알림 소스를 켜 두세요.
+플러그인 `0.6.2`와 동봉된 확장 프로그램 `0.4.1`에서 사용할 수 있습니다. OBS를 실행하고 방송 화면에 알림 소스를 켜 두세요.
 
-업데이트 후 Chrome/Edge의 확장 프로그램 메뉴에서 `OBSChzzk 리모컨 이벤트 브리지`를 클릭하면 연결 상태와 `OBS에 테스트 알림 보내기` 버튼이 나타납니다. 테스트 닉네임을 입력해 전송하고 성공·실패 결과를 확인할 수 있습니다. 리모컨을 열지 않고도 사용할 수 있습니다.
+업데이트 후 Chrome/Edge의 확장 프로그램 메뉴에서 `OBSChzzkEvent 리모컨 이벤트 브리지`를 클릭하면 연결 상태와 `OBS에 테스트 알림 보내기` 버튼이 나타납니다. 테스트 닉네임을 입력해 전송하고 성공·실패 결과를 확인할 수 있습니다. 리모컨을 열지 않고도 사용할 수 있습니다.
 
 이 기능은 확장 프로그램과 OBS 사이의 전달을 확인합니다. OBS가 신호를 받은 뒤 현재 방송 장면의 알림 소스를 확인해 주세요. 다른 장면에 있으면 해당 장면으로 돌아왔을 때 표시됩니다. 반복 테스트는 가능하며, 실제 팔로우 수신 시각에는 영향을 주지 않습니다.
 
 ## 다운로드
 
-현재 버전은 `0.6.1`이며, 동봉된 브라우저 확장 프로그램은 `0.4.0`입니다.
+현재 버전은 `0.6.2`이며, 동봉된 브라우저 확장 프로그램은 `0.4.1`입니다.
 
-- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.6.1/obs-chzzk-alerts-0.6.1-windows-x64-setup.exe)
-- [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/OBSChzzkEvent-Releases/releases/download/v0.6.2/OBSChzzkEvent-0.6.2-windows-x64-setup.exe)
+- [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/OBSChzzkEvent-Releases/releases/latest)
 
 일반 사용자는 설치 파일을 권장합니다. ZIP 설치가 필요한 경우 아래의 접힌 수동 설치 안내를 펼쳐 주세요. 다운로드한 파일은 릴리스에 첨부된 `SHA256SUMS.txt`와 비교할 수 있습니다.
 
@@ -103,7 +104,7 @@ OBS Live Editor도 사용한다면 반드시 `0.3.2` 이상으로 업데이트�
 <details>
 <summary>ZIP으로 수동 설치하기 (필요한 경우 펼치기)</summary>
 
-[수동 설치용 Windows x64 ZIP 다운로드](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/download/v0.6.1/obs-chzzk-alerts-0.6.1-windows-x64.zip)
+[수동 설치용 Windows x64 ZIP 다운로드](https://github.com/TereBin/OBSChzzkEvent-Releases/releases/download/v0.6.2/OBSChzzkEvent-0.6.2-windows-x64.zip)
 
 OBS를 완전히 종료한 뒤 ZIP의 파일을 다음 위치에 복사합니다.
 
@@ -120,10 +121,10 @@ OBS를 완전히 종료한 뒤 ZIP의 파일을 다음 위치에 복사합니다
 
 1. OBS Studio와 열려 있는 치지직 리모컨 탭을 종료합니다.
 2. 최신 설치 파일을 내려받아 실행합니다.
-3. 설치가 끝나면 확장 프로그램 관리 화면에서 `OBSChzzk 리모컨 이벤트 브리지`의 새로고침 버튼을 누릅니다.
+3. 설치가 끝나면 확장 프로그램 관리 화면에서 `OBSChzzkEvent 리모컨 이벤트 브리지`의 새로고침 버튼을 누릅니다.
 4. OBS와 치지직 리모컨을 다시 실행합니다.
 
-플러그인은 자동으로 다운로드하거나 설치하지 않습니다. 새 버전은 [최신 릴리스 페이지](https://github.com/TereBin/obs-chzzk-alerts-releases/releases/latest)에서 직접 확인합니다.
+플러그인은 자동으로 다운로드하거나 설치하지 않습니다. 새 버전은 [최신 릴리스 페이지](https://github.com/TereBin/OBSChzzkEvent-Releases/releases/latest)에서 직접 확인합니다.
 
 ## 설정 방법
 
@@ -139,7 +140,9 @@ Chrome은 주소창에 `chrome://extensions`, Edge는 `edge://extensions`를 입
    <OBS 설치 폴더>\data\obs-plugins\obs-chzzk-alerts\browser-relay
    ```
 
-4. `OBSChzzk 리모컨 이벤트 브리지`가 활성화됐는지 확인합니다. `0.6.1` 패키지에 포함된 확장 프로그램 버전은 `0.4.0`입니다.
+4. `OBSChzzkEvent 리모컨 이벤트 브리지`가 활성화됐는지 확인합니다. `0.6.2` 패키지에 포함된 확장 프로그램 버전은 `0.4.1`입니다.
+
+기존 등록을 이어서 사용할 수 있도록 확장 프로그램 폴더 이름은 `obs-chzzk-alerts`로 유지합니다. 이미 등록했다면 새로 등록하지 않고 새로고침하면 됩니다.
 
 업데이트 후에는 확장 프로그램 관리 화면에서 새로고침 버튼을 누르고, 열려 있던 치지직 리모컨 탭도 새로고침해야 합니다.
 
@@ -204,8 +207,8 @@ OBS 상단 메뉴의 `독 > 치지직 알림 연결 상태`를 켭니다.
 ## 제거
 
 1. OBS Studio를 완전히 종료합니다.
-2. Windows의 `설정 > 앱 > 설치된 앱`에서 `OBS Chzzk Alerts`를 제거합니다.
-3. Chrome/Edge 확장 프로그램 관리 화면에서 `OBSChzzk 리모컨 이벤트 브리지`를 제거합니다.
+2. Windows의 `설정 > 앱 > 설치된 앱`에서 `OBSChzzkEvent`를 제거합니다.
+3. Chrome/Edge 확장 프로그램 관리 화면에서 `OBSChzzkEvent 리모컨 이벤트 브리지`를 제거합니다.
 4. OBS 소스 목록에 `치지직 팔로우 알림` 소스가 남아 있다면 직접 삭제합니다.
 
 ## 문제 해결
@@ -260,7 +263,7 @@ OBS 상단 메뉴의 `독 > 치지직 알림 연결 상태`를 켭니다.
 ### 설치 프로그램이 OBS를 찾지 못함
 
 - **확인:** `<OBS 설치 폴더>\bin\64bit\obs64.exe`가 존재하는지 확인합니다.
-- **해결:** 64비트 OBS Studio를 정식 설치 프로그램으로 설치한 뒤 OBS Chzzk Alerts 설치를 다시 시도합니다.
+- **해결:** 64비트 OBS Studio를 정식 설치 프로그램으로 설치한 뒤 OBSChzzkEvent 설치를 다시 시도합니다.
 
 ### OBS가 실행 중이라는 안내가 표시됨
 
@@ -275,11 +278,11 @@ OBS 상단 메뉴의 `독 > 치지직 알림 연결 상태`를 켭니다.
 
 확장 프로그램은 치지직 스트리머 스튜디오 페이지에서 팔로우 이벤트를 감지합니다. 치지직 로그인 쿠키, WebSocket 인증값과 전체 이벤트 내용은 OBS로 전달하지 않습니다.
 
-소스 코드, 기술 구조와 빌드 방법은 [obs-chzzk-alerts 소스 저장소](https://github.com/TereBin/obs-chzzk-alerts)에서 확인할 수 있습니다. OBS Chzzk Alerts는 GNU General Public License v2.0으로 배포됩니다.
+소스 코드, 기술 구조와 빌드 방법은 [OBSChzzkEvent 소스 저장소](https://github.com/TereBin/OBSChzzkEvent)에서 확인할 수 있습니다. OBSChzzkEvent는 GNU General Public License v2.0으로 배포됩니다.
 
 ## 문제 보고
 
-오류 보고와 기능 제안은 [OBS Chzzk Alerts Issues](https://github.com/TereBin/obs-chzzk-alerts/issues)를 이용해 주세요. 공개 이슈 작성이 어렵거나 개별 문의가 필요하면 [Discord에서 TereBin에게 문의](https://discordapp.com/users/537256771501424640)할 수 있습니다.
+오류 보고와 기능 제안은 [OBSChzzkEvent Issues](https://github.com/TereBin/OBSChzzkEvent/issues)를 이용해 주세요. 공개 이슈 작성이 어렵거나 개별 문의가 필요하면 [Discord에서 TereBin에게 문의](https://discordapp.com/users/537256771501424640)할 수 있습니다.
 
 OBS에서 `도움말 > 로그 파일 > 현재 로그 보기`를 선택하고, 문제 발생 직후 로그에서 `[obs-chzzk-alerts]`가 포함된 줄과 Chrome/Edge 확장 프로그램 오류를 함께 제공하면 원인 확인이 빠릅니다.
 
@@ -287,4 +290,4 @@ WebSocket URL의 `auth` 값, 치지직 로그인 쿠키 또는 전체 HAR 파일
 
 ## 후원
 
-OBS Chzzk Alerts가 도움이 되었다면 [Ko-fi에서 TereBin 후원하기](https://ko-fi.com/terebin)를 통해 개발을 응원할 수 있습니다.
+OBSChzzkEvent가 도움이 되었다면 [Ko-fi에서 TereBin 후원하기](https://ko-fi.com/terebin)를 통해 개발을 응원할 수 있습니다.
